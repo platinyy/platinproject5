@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <title>Project 5</title>
 <meta charset="utf-8">
@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <input id="search" name="search" placeholder="Start typing here" type="text" data-list=".default_list" autocomplete="off">
+  <input id="search" name="search" placeholder="Search (16pt)" type="text" data-list=".default_list" autocomplete="off">
 
-  <div class="gallery">
-        <a href="photos/01.jpg" class="default_list"
+  <div class="gallery default_list">
+        <a href="photos/01.jpg" 
           data-lightbox="mygallery"
           data-title="I love hay bales. Took this snap on a drive through the countryside past some straw fields.
          "
@@ -20,7 +20,7 @@
         </a>
 
         <a 
-          href="photos/02.jpg" class="default_list"
+          href="photos/02.jpg" 
           data-lightbox="mygallery"
           data-title="The lake was so calm today. We had a great view of the snow on the mountains from here."
         >
@@ -29,7 +29,7 @@
         </a>
       
       <a 
-      href="photos/03.jpg" class="default_list"
+      href="photos/03.jpg" 
       data-lightbox="mygallery"
       data-title="I hiked to the top of the mountain and got this picture of the canyon and trees below."
     >
@@ -37,7 +37,7 @@
      
     </a>
     <a 
-    href="photos/04.jpg" class="default_list"
+    href="photos/04.jpg" 
     data-lightbox="mygallery"
     data-title="kari 
     "
@@ -46,7 +46,7 @@
    
   </a>
   <a 
-  href="photos/05.jpg" class="default_list"
+  href="photos/05.jpg" 
   data-lightbox="mygallery"
   data-title="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."
 >
@@ -54,7 +54,7 @@
  
 </a>
 <a 
-href="photos/06.jpg"class="default_list"
+href="photos/06.jpg"
 data-lightbox="mygallery"
 data-title="Fall is coming, I love when the leaves on the trees start to change color.
 "
@@ -63,7 +63,7 @@ data-title="Fall is coming, I love when the leaves on the trees start to change 
 
 </a>
 <a 
-href="photos/07.jpg" class="default_list"
+href="photos/07.jpg" 
 data-lightbox="mygallery"
 data-title="I drove past this plantation yesterday, everything is so green!"
 >
@@ -71,7 +71,7 @@ data-title="I drove past this plantation yesterday, everything is so green!"
 
 </a>
 <a 
-href="photos/08.jpg" class="default_list"
+href="photos/08.jpg" 
 data-lightbox="mygallery"
 data-title="My summer vacation to the Oregon Coast. I love the sandy dunes!
 "
@@ -80,7 +80,7 @@ data-title="My summer vacation to the Oregon Coast. I love the sandy dunes!
 
 </a>
 <a 
-href="photos/09.jpg" class="default_list"
+href="photos/09.jpg" 
 data-lightbox="mygallery"
 data-title="We enjoyed a quiet stroll down this countryside lane."
 >
@@ -88,7 +88,7 @@ data-title="We enjoyed a quiet stroll down this countryside lane."
 
 </a>
 <a 
-href="photos/10.jpg" class="default_list"
+href="photos/10.jpg" 
 data-lightbox="mygallery"
 data-title="Sunset at the coast! The sky turned a lovely shade of orange."
 >
@@ -98,7 +98,7 @@ data-title="Sunset at the coast! The sky turned a lovely shade of orange."
 
 
 <a 
-href="photos/11.jpg" class="default_list"
+href="photos/11.jpg" 
 data-lightbox="mygallery"
 data-title="I did a tour of a cave today and the view of the landscape below was breathtaking.
 "
@@ -107,7 +107,7 @@ data-title="I did a tour of a cave today and the view of the landscape below was
 
 </a>
 <a 
-href="photos/12.jpg" class="default_list"
+href="photos/12.jpg" 
 data-lightbox="mygallery"
 data-title="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
 >
@@ -120,8 +120,10 @@ data-title="I walked through this meadow of bluebells and got a good view of the
  
  <script>
  
-  $(document).ready(function() {
-	$('#search').hideseek();
+ $(document).ready(function() {
+  $('#search').hideseek({
+    attribute: 'data-title',
+  });
 });
   </script>
 </body>
